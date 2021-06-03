@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ShoutOut from "../model/ShoutOut";
 import { readAllShoutOuts } from "../service/ShoutOutApi";
+import ShoutOutPost from "./ShoutOutPost"
 
 function ShoutList() {
   const [shoutOuts, setShoutOuts] = useState<ShoutOut[]>([]);
@@ -17,15 +18,11 @@ function ShoutList() {
 
   return (
     <div className="ShoutList">
-      <ul className="listOfShouts">
-        {shoutOuts.map((shoutOut) => (
-          <li key={shoutOut._id}>
-            <span>To: {shoutOut.to}</span>
-            <span>From: {shoutOut.from}</span>
-            <span>Message: {shoutOut.message}</span>
-          </li>
+      <div className="listOfShouts">
+        {shoutOuts.map(eachShoutout => (
+          <ShoutOutPost key={eachShoutout._id} shoutOut={eachShoutout} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
