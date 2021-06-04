@@ -2,9 +2,10 @@ import ShoutOut from "../model/ShoutOut";
 
 interface Props {
     shoutOut: ShoutOut;
+    onDelete: () => void;
 }
 
-function ShoutOutPost({shoutOut}: Props) {
+function ShoutOutPost({shoutOut, onDelete}: Props) {
     return (
         <div className="ShoutOutPost">
             <div className="ToFrom">
@@ -13,6 +14,9 @@ function ShoutOutPost({shoutOut}: Props) {
             </div>
             <div className="MessageContainer">
                 <p className="Message"> {shoutOut.message} </p>
+            </div>
+            <div className="DeleteButton">
+                <button onClick={onDelete} >Un Shout</button>
             </div>
         </div>
     )
