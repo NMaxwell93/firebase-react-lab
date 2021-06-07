@@ -1,5 +1,6 @@
 import { FormEvent, useState } from "react";
 import ShoutOut from "../model/ShoutOut";
+import "./ShoutOutForm.css"
 
 interface Props {
     onSubmit: (shoutOut: ShoutOut) => void
@@ -40,7 +41,7 @@ function ShoutOutForm({onSubmit}:Props) {
                 <textarea id="Message_form" value={message} onChange={e => setMessage(e.target.value)} required />
             </p>
             <p>
-                <button type="submit">Submit Shout Out!</button>
+                <button className="SubmitButton" type="submit">Shout Out!</button>
             </p>
         </form>
     )

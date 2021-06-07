@@ -1,0 +1,34 @@
+.ShoutOutForm {
+    background-color: white;
+    border: solid 3px #aaa;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.SubmitButton {
+    background-color: white;
+    border: solid 2px #999;
+    padding: auto;
+    width: 15%;
+}
+
+p {
+    display: flex;
+    flex-direction: column;
+}
+
+#To_form {
+    width: 35%;
+}
+
+#From_form {
+    width: 35%;
+}
+
+#Message_form {
+    height: 100px;
+}

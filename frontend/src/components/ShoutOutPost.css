@@ -1,0 +1,13 @@
+.ShoutOutPost {
+    background-color: white;
+    border: solid 3px #aaa;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.DeleteButton {
+    background-color: white;
+    border: solid 2px #999;
+}

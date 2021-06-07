@@ -1,4 +1,5 @@
 import ShoutOut from "../model/ShoutOut";
+import "./ShoutOutPost.css"
 
 interface Props {
     shoutOut: ShoutOut;
@@ -15,8 +16,8 @@ function ShoutOutPost({shoutOut, onDelete}: Props) {
             <div className="MessageContainer">
                 <p className="Message"> {shoutOut.message} </p>
             </div>
-            <div className="DeleteButton">
-                <button onClick={onDelete} >Un Shout</button>
+            <div className="DeleteButtonDiv">
+                <button className="DeleteButton" onClick={onDelete} >Un Shout</button>
             </div>
         </div>
     )
