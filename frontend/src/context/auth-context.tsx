@@ -5,11 +5,11 @@ export interface AuthContextModel {
   user: firebase.User|null; // null when not logged in
 }
 
-const initialValue:AuthContextModel = {
+const defaultValue:AuthContextModel = {
   user: null
 };
 
-export const AuthContext = createContext(initialValue);
+export const AuthContext = createContext(defaultValue);
 
 export function AuthContextProvider({children}: {children: ReactNode}) {
   const [ user, setUser ] = useState<firebase.User|null>(null);
